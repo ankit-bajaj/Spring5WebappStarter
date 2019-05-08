@@ -2,7 +2,6 @@ package com.anki2bajaj.Spring5WebappStarter.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -16,7 +15,7 @@ public class Book {
 
  private String isbn;
 
- private String publisher ;
+ private Publisher publisher ;
 //
 // @ManyToMany
 // @JoinTable(name = "author_book" , joinColumns = @JoinColumn(name="book_id"),
@@ -37,7 +36,7 @@ above both case creates mapping table , dfference yet to figureout
     public Book() {
     }
 
-    public Book(long id, String title, String isbn, String publisher, Set<Author> authors) {
+    public Book(long id, String title, String isbn, Publisher publisher, Set<Author> authors) {
         this.id = id;
         this.title = title;
         this.isbn = isbn;
@@ -45,7 +44,7 @@ above both case creates mapping table , dfference yet to figureout
         this.authors = authors;
     }
 
-    public Book(String title, String isbn, String publisher) {
+    public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
@@ -76,11 +75,11 @@ above both case creates mapping table , dfference yet to figureout
         this.isbn = isbn;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 
