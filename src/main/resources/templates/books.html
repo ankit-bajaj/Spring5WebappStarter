@@ -12,11 +12,11 @@
         <th>Title</th>
         <th>Publisher</th>
     </tr>
-    <tr th:each="book : ${books}">
+    <tr th:each="book : ${books_model}">
     <!--<tr th:each="book : ${books}"">-->
         <!-- here in above line typo error done , put extra double quotes this gives error thymeleaf parsing exception-->
       <!--So be careful in writing templates as a much typo cn happen-->
-        <td th:text="${book.id}">123</td>
+    <td th:text="${book.id}">123</td>
     <td th:text="${book.title}">Spring in Action</td>
     <td th:text="${book.publisher.name}">Wrox</td>
     </tr>

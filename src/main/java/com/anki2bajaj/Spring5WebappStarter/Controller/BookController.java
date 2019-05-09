@@ -17,7 +17,7 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model){ // passing a model attribute which act as a transportor to view
 
-        model.addAttribute("book" , bookRepository.findAll());
+        model.addAttribute("books_model" , bookRepository.findAll()); // here typo mistake here initially written book but in view template we were using books , so make books here
 
         return "books" ; // its just returning to view page named books       ie. books.html in view folder in resources
                                 // name can be any thing but that should be same in view folder
